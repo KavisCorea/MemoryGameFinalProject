@@ -1,0 +1,18 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "/home/kcorea/CLionProjects/MemoryGameFinal/cmake-build-debug",
+	"dir-cur-src" : "/home/kcorea/CLionProjects/MemoryGameFinal",
+	"dir-top-bld" : "/home/kcorea/CLionProjects/MemoryGameFinal/cmake-build-debug",
+	"dir-top-src" : "/home/kcorea/CLionProjects/MemoryGameFinal",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : [],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/home/kcorea/CLionProjects/MemoryGameFinal/cmake-build-debug/CMakeFiles/MemoryGameFinal.dir"
+}

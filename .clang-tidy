@@ -1,0 +1,54 @@
+---
+# Basic configuration for clang-format
+
+# Based on the LLVM coding style.
+BasedOnStyle: LLVM
+
+# Indentation
+IndentWidth: 4          # Number of spaces for indentation
+TabWidth: 4             # Number of spaces per tab
+UseTab: AlignWithSpaces           # Use spaces instead of tabs
+
+# Braces
+BreakBeforeBraces: Allman    # Place braces on a new line
+AllowShortBlocksOnASingleLine: Always  # Short blocks on one line only if empty
+AllowShortFunctionsOnASingleLine: All  # Short functions on one line only if empty
+
+# Line Length
+ColumnLimit: 80          # Maximum line length
+
+# Naming Conventions
+# There is no direct way to enforce naming conventions with clang-format.
+# This must be done through code review and manual consistency.
+
+# Comment Formatting
+CommentPragmas: '^//'    # Comments start with '//' for regular comments
+
+# Space Management
+SpaceBeforeParens: ControlStatements # No space before parentheses in control statements
+SpaceAfterCStyleCast: false           # No space after C-style casts
+SpaceAfterLogicalNot: false           # No space after '!' in logical not
+AlignEscapedNewlines: Right
+# Alignments
+AlignAfterOpenBracket: Align      # Align after open bracket
+AlignTrailingComments: true       # Align trailing comments
+# Function Formatting
+BreakConstructorInitializers: AfterColon   # Break constructor initializers before comma
+BreakBeforeBinaryOperators: None     # Break before binary operators (excluding assignment)
+PenaltyBreakBeforeFirstCallParameter: 19     # Penalty for breaking before the first call parameter
+IndentCaseBlocks: true
+# Miscellaneous
+DerivePointerAlignment: false      # Do not align pointers with type
+PointerAlignment: Left             # Pointer alignment is to the left
+ReflowComments: true
+
+# Sorting
+SortIncludes: CaseSensitive
+IncludeBlocks: Regroup          # Preserve include blocks
+
+# C++ Standards
+Standard: Latest                  # Use C++17 standard
+
+# Indent Case Labels
+IndentCaseLabels: true           # Indent case labels
+AllowShortEnumsOnASingleLine: false
