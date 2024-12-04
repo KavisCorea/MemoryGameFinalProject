@@ -7,4 +7,8 @@ add_executable(MemoryGameFinal main.cpp
         Game.cpp
         Game.h
         themes.cpp
-        themes.h)
+        themes.h
+        asciiArt.cpp
+        asciiArt.h
+        boardData.cpp
+        boardData.h)

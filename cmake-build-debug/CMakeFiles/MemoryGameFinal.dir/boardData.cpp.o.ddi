@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles/MemoryGameFinal.dir/boardData.cpp.o",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

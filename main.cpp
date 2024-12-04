@@ -1,6 +1,13 @@
 #include <iostream>
 
+#include "asciiArt.h"
+#include "themes.h"
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+
+    themes test;
+    test.themeInitialize(1);
+    boardData::shuffleList(test.getThemeList());
+
+    asciiArt gridTest;
+    gridTest.grid();
 }

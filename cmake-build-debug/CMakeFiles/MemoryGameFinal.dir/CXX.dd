@@ -1,0 +1,11 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles/MemoryGameFinal.dir/main.cpp.o: dyndep
+
+build CMakeFiles/MemoryGameFinal.dir/Game.cpp.o: dyndep
+
+build CMakeFiles/MemoryGameFinal.dir/themes.cpp.o: dyndep
+
+build CMakeFiles/MemoryGameFinal.dir/asciiArt.cpp.o: dyndep
+
+build CMakeFiles/MemoryGameFinal.dir/boardData.cpp.o: dyndep
+

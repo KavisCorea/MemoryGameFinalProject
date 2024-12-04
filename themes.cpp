@@ -5,27 +5,33 @@
 #include "themes.h"
 #include <fstream>
 #include <iostream>
-using namespace std;
-void themes::themeInitialize(int choiceInput) {
-    choice = choiceInput;
-    ifstream<string> file;
-    file = "resources/" + whichFile();
-    file.open(file);
-    for (int index = 0; index < 50; index++) {
-        getline(file, themeStringList.push_back);
 
-        //checking for max string length logic
-        string check;
-        getline(file, check);
-        checkMax(check.size());
+#include "boardData.h"
+using namespace std;
+void themes::themeInitialize(int choiceInput){
+    choice = choiceInput;
+
+    ifstream file;
+    string filePath = "resources/" + whichFile();
+    file.open(filePath);
+
+    for (string container; getline(file, container); checkMax(container.size())) {
+        themeStringList.push_back(container);
     }
     //reads files and inputs them into themeStringList, inputs them at the last index, mainly for flexibility and
     //to account for multi-theme mode and beyond 10x10 grid
+    //also this for loop makes a temporary string variable to store the line, and check the string size,
+    //since I will want to adjust the size of the boxes I make depending on the size. It uses the checkMax method here,
+    //and stores it
+    file.close();
+    if (boardData::maxWordLength < maxLength){boardData::maxWordLength = maxLength;}
 }
 
-string themes::getThemeWord(int index){return themeStringList[index];}
+vector<string> themes::getThemeList(){return themeStringList;}
 int themes::getMaxLength() {return maxLength;}
 void themes::reset() {themeStringList.clear(); maxLength = 0;}
+int themes::getThemeListLength() {return themeStringList.size();}
+
 
 string themes::whichFile() {
     string fileName;
