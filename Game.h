@@ -14,9 +14,14 @@ class Game
 
 private:
     memoryGrid gridLogic; //Effectively the game logic, keeping track what's shown, giving info for the display logic, so on.
-    display tuiLogic; //Logic for displaying the information on screen, updating screen to feel reactive and such. In charge of interactivity as well
+
+    //Logic to communicate with displayLogic
+    menu tuiLogic;
     themes themesLogic; //Logic for themes: including selection, reading, and providing data for other classes
-    asciiArt artReference; //Effectively a table of reference to be able to easily print ASCII art and handles grid size logic
+
+    //Effectively a table of reference to be able to easily print ASCII art and handles the display logic. Communicates
+    //heavily with tuiLogic
+    display displayLogic;
     boardDataBase gameData; //Stores data to be referenced globally
 };
 

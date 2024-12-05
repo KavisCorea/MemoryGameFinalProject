@@ -43294,11 +43294,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 2 "/home/kcorea/CLionProjects/MemoryGameFinal/main.cpp" 2
-
-# 1 "/home/kcorea/CLionProjects/MemoryGameFinal/asciiArt.h" 1
-       
-
-
 # 1 "/home/kcorea/CLionProjects/MemoryGameFinal/boardData.h" 1
 
 
@@ -48231,8 +48226,14 @@ struct boardData {
 
    static void shuffleList(std::vector<std::string> list);
    static void boardInitialize();
+   static void checkMax();
 };
-# 5 "/home/kcorea/CLionProjects/MemoryGameFinal/asciiArt.h" 2
+# 3 "/home/kcorea/CLionProjects/MemoryGameFinal/main.cpp" 2
+# 1 "/home/kcorea/CLionProjects/MemoryGameFinal/display.h" 1
+       
+
+
+
 # 1 "/home/kcorea/CLionProjects/MemoryGameFinal/themes.h" 1
        
 
@@ -48255,15 +48256,15 @@ private:
 
     std::vector<std::string> themeStringList;
     std::string whichFile();
-    void checkMax(int stringLength);
 };
-# 6 "/home/kcorea/CLionProjects/MemoryGameFinal/asciiArt.h" 2
+# 6 "/home/kcorea/CLionProjects/MemoryGameFinal/display.h" 2
 
-class asciiArt
+class display
 {
 public:
 
-    void grid();
+    display(std::vector<std::vector<std::string>>& wordList);
+    void renderButton();
 private:
     std::string bottomLeftCorner = "╚";
     std::string topLeftCorner = "╔";
@@ -48274,22 +48275,59 @@ private:
     std::string horizontalLine = "═";
     std::string verticalLine = "║";
 
-    int index = 0;
-    int columnLength = boardData::maxWordLength + 2;
+    int columnSize = 0;
+    int rowSize = 0;
+    int maxStringLength = 0;
+    int columnLength = 0;
+    int boxHeight = 5;
+    int boxWidth = 0;
+
+    int yCoordinate = 0;
+    int xCoordinate = 0;
+
+    int timesPrintedX = 0;
+    int timesPrintedY = 0;
+
+    std::string space = " ";
+
+    std::vector<std::vector<std::string>> currentWordList;
 
     void cornerLoop(std::string leftCorner, std::string rightCorner);
     void middleLoop();
+    void checkMax(std::vector<std::vector<std::string>>& wordList);
     int marginLogic(bool rightMargin, int x, int y);
+    void colorTracker();
+    void printAndTrack(std::string& str);
+    void reset();
 
+    std::string compareContainer[6] = {horizontalLine, verticalLine, topLeftCorner, topRightCorner, bottomLeftCorner, bottomRightCorner};
 };
 # 4 "/home/kcorea/CLionProjects/MemoryGameFinal/main.cpp" 2
 
-int main() {
+# 1 "/home/kcorea/CLionProjects/MemoryGameFinal/tuiLogic.h" 1
+# 11 "/home/kcorea/CLionProjects/MemoryGameFinal/tuiLogic.h"
+class tuiLogic {
+public:
+    void mainMenu();
+    void modeSelect();
+    void difficultySelect();
+    void themeSelect();
+    static void generateButtons(std::vector<std::vector<std::string>>& buttons);
+    static std::vector<std::vector<bool>> buttonSelected;
+    private:
+    static int columnSize;
+    static int rowSize;
+};
+# 6 "/home/kcorea/CLionProjects/MemoryGameFinal/main.cpp" 2
 
+int main() {
     themes test;
     test.themeInitialize(1);
     boardData::shuffleList(test.getThemeList());
 
-    asciiArt gridTest;
-    gridTest.grid();
+
+    display gridTest(boardData::boardCoordinates);
+    tuiLogic::generateButtons(boardData::boardCoordinates);
+
+    std::cout << std::endl;
 }

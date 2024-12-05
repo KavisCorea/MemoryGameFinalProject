@@ -36833,6 +36833,7 @@ struct boardData {
 
    static void shuffleList(std::vector<std::string> list);
    static void boardInitialize();
+   static void checkMax();
 };
 # 6 "/home/kcorea/CLionProjects/MemoryGameFinal/boardData.cpp" 2
 
@@ -68251,31 +68252,48 @@ void boardData::shuffleList(vector<string> list) {
     }
     boardData::randomWordList = shuffleContainer;
 
+    checkMax();
+    cout << "Max string size: " << maxWordLength << endl;
+    boardInitialize();
 }
+
 
 void boardData::boardInitialize(){
     random_device seed;
     mt19937 generator(seed());
     uniform_int_distribution<int> randomGen(0, randomWordList.size() - 1);
     vector<bool> notDuplicate(randomWordList.size(), true);
+
     int resetFlag = 0;
     int randomNumber;
+    int count;
     for (int y = 0; y < rowSize; y++) {
         for (int x = 0; x < columnSize; x++) {
-            if (resetFlag > boardMaxTerms) {
+            if (resetFlag == boardMaxTerms) {
                 fill (begin(notDuplicate), end(notDuplicate), true);
                 resetFlag = 0;
             }
 
 
+
+            int infiniteTracker;
             while(true) {
                 randomNumber = randomGen(generator);
+                infiniteTracker++;
                 if (notDuplicate[randomNumber]) {break;}
+                if (infiniteTracker > 1000) {throw runtime_error ("Infinite loop in board initiation");}
+
             }
             boardCoordinates[y][x] = randomWordList[randomNumber];
-            cout << boardCoordinates[y][x] << endl;
+            cout << "Populate time: " << ++count << endl;
             notDuplicate[randomNumber] = false;
             resetFlag++;
         }
+    }
+}
+
+void boardData::checkMax() {
+    for (int t = 0; t < boardData::boardMaxTerms; t++) {
+        if (maxWordLength < randomWordList[t].size()){maxWordLength = randomWordList[t].size();}
     }
 }

@@ -15,7 +15,7 @@ void themes::themeInitialize(int choiceInput){
     string filePath = "resources/" + whichFile();
     file.open(filePath);
 
-    for (string container; getline(file, container); checkMax(container.size())) {
+    for (string container; getline(file, container);) {
         themeStringList.push_back(container);
     }
     //reads files and inputs them into themeStringList, inputs them at the last index, mainly for flexibility and
@@ -51,4 +51,3 @@ string themes::whichFile() {
     return fileName;
 }
 
-void themes::checkMax(int stringLength){if (stringLength > maxLength) {maxLength = stringLength;}}

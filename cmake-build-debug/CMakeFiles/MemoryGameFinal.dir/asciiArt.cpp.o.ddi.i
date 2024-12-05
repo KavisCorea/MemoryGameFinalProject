@@ -36837,6 +36837,7 @@ struct boardData {
 
    static void shuffleList(std::vector<std::string> list);
    static void boardInitialize();
+   static void checkMax();
 };
 # 5 "/home/kcorea/CLionProjects/MemoryGameFinal/asciiArt.h" 2
 # 1 "/home/kcorea/CLionProjects/MemoryGameFinal/themes.h" 1
@@ -36861,7 +36862,6 @@ private:
 
     std::vector<std::string> themeStringList;
     std::string whichFile();
-    void checkMax(int stringLength);
 };
 # 6 "/home/kcorea/CLionProjects/MemoryGameFinal/asciiArt.h" 2
 
@@ -48308,23 +48308,22 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 10 "/home/kcorea/CLionProjects/MemoryGameFinal/asciiArt.cpp"
 using namespace std;
 void asciiArt::grid(){
-    for (int y = 0; y < boardData::rowSize-1; y++) {
+    for (int y = 0; y < boardData::rowSize; y++) {
 
         cornerLoop(topLeftCorner, topRightCorner);
         cout << endl;
-
 
 
         middleLoop();
         cout << endl;
 
 
-        for (int x = 0; x < boardData::columnSize-1; x++) {
+        for (int x = 0; x < boardData::columnSize; x++) {
             cout << verticalLine;
 
-            for (int s = 0; s < marginLogic(false, x, y); s++) {cout << " ";}
-            cout << boardData::boardCoordinates[x][y];
-            for (int s = 0; s < marginLogic(true, x, y); s++ ) {cout << " ";}
+            for (int s = 0; s < marginLogic(false, y, x); s++) {cout << " ";}
+            cout << boardData::boardCoordinates[y][x];
+            for (int s = 0; s < marginLogic(true, y, x); s++ ) {cout << " ";}
             cout << verticalLine;
         }
         cout << endl;
@@ -48358,10 +48357,13 @@ void asciiArt::middleLoop() {
     }
 }
 
-int asciiArt::marginLogic(bool rightMargin, int x, int y) {
-    string& word = boardData::boardCoordinates[x][y];
-    int marginSize = (columnLength - word.size()) / 2;
-    if (rightMargin && word.size() % 2 != 0) {marginSize++;};
+int asciiArt::marginLogic(bool rightMargin, int y, int x) {
 
-    return marginSize;
+    string& word = boardData::boardCoordinates[y][x];
+    int totalPadding = columnLength - word.size();
+
+    int leftPadding = totalPadding/2;
+    int rightPadding = totalPadding - leftPadding;
+
+    return rightMargin ? rightPadding : leftPadding;
     }

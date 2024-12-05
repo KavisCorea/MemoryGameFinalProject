@@ -36833,7 +36833,6 @@ private:
 
     std::vector<std::string> themeStringList;
     std::string whichFile();
-    void checkMax(int stringLength);
 };
 # 6 "/home/kcorea/CLionProjects/MemoryGameFinal/themes.cpp" 2
 # 1 "/usr/include/c++/14.2.0/fstream" 1 3
@@ -50870,6 +50869,7 @@ struct boardData {
 
    static void shuffleList(std::vector<std::string> list);
    static void boardInitialize();
+   static void checkMax();
 };
 # 10 "/home/kcorea/CLionProjects/MemoryGameFinal/themes.cpp" 2
 using namespace std;
@@ -50880,7 +50880,7 @@ void themes::themeInitialize(int choiceInput){
     string filePath = "resources/" + whichFile();
     file.open(filePath);
 
-    for (string container; getline(file, container); checkMax(container.size())) {
+    for (string container; getline(file, container);) {
         themeStringList.push_back(container);
     }
 
@@ -50915,5 +50915,3 @@ string themes::whichFile() {
     }
     return fileName;
 }
-
-void themes::checkMax(int stringLength){if (stringLength > maxLength) {maxLength = stringLength;}}

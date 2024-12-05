@@ -19,6 +19,5 @@ private:
 
     std::vector<std::string> themeStringList;
     std::string whichFile();
-    void checkMax(int stringLength);
 };
 

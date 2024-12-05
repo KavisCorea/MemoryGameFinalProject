@@ -94,16 +94,16 @@ build CMakeFiles/MemoryGameFinal.dir/themes.cpp.o: CXX_COMPILER__MemoryGameFinal
   OBJECT_FILE_DIR = CMakeFiles/MemoryGameFinal.dir
   dyndep = CMakeFiles/MemoryGameFinal.dir/CXX.dd
 
-build CMakeFiles/MemoryGameFinal.dir/asciiArt.cpp.o.ddi: CXX_SCAN__MemoryGameFinal_Debug /home/kcorea/CLionProjects/MemoryGameFinal/asciiArt.cpp || cmake_object_order_depends_target_MemoryGameFinal
-  DEP_FILE = CMakeFiles/MemoryGameFinal.dir/asciiArt.cpp.o.ddi.d
-  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/MemoryGameFinal.dir/asciiArt.cpp.o.ddi
+build CMakeFiles/MemoryGameFinal.dir/display.cpp.o.ddi: CXX_SCAN__MemoryGameFinal_Debug /home/kcorea/CLionProjects/MemoryGameFinal/display.cpp || cmake_object_order_depends_target_MemoryGameFinal
+  DEP_FILE = CMakeFiles/MemoryGameFinal.dir/display.cpp.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/MemoryGameFinal.dir/display.cpp.o.ddi
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJ_FILE = CMakeFiles/MemoryGameFinal.dir/asciiArt.cpp.o
-  PREPROCESSED_OUTPUT_FILE = CMakeFiles/MemoryGameFinal.dir/asciiArt.cpp.o.ddi.i
+  OBJ_FILE = CMakeFiles/MemoryGameFinal.dir/display.cpp.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/MemoryGameFinal.dir/display.cpp.o.ddi.i
 
-build CMakeFiles/MemoryGameFinal.dir/asciiArt.cpp.o: CXX_COMPILER__MemoryGameFinal_scanned_Debug /home/kcorea/CLionProjects/MemoryGameFinal/asciiArt.cpp | CMakeFiles/MemoryGameFinal.dir/asciiArt.cpp.o.modmap || cmake_object_order_depends_target_MemoryGameFinal CMakeFiles/MemoryGameFinal.dir/CXX.dd
-  DEP_FILE = CMakeFiles/MemoryGameFinal.dir/asciiArt.cpp.o.d
-  DYNDEP_MODULE_MAP_FILE = CMakeFiles/MemoryGameFinal.dir/asciiArt.cpp.o.modmap
+build CMakeFiles/MemoryGameFinal.dir/display.cpp.o: CXX_COMPILER__MemoryGameFinal_scanned_Debug /home/kcorea/CLionProjects/MemoryGameFinal/display.cpp | CMakeFiles/MemoryGameFinal.dir/display.cpp.o.modmap || cmake_object_order_depends_target_MemoryGameFinal CMakeFiles/MemoryGameFinal.dir/CXX.dd
+  DEP_FILE = CMakeFiles/MemoryGameFinal.dir/display.cpp.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/MemoryGameFinal.dir/display.cpp.o.modmap
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/MemoryGameFinal.dir
   OBJECT_FILE_DIR = CMakeFiles/MemoryGameFinal.dir
@@ -124,7 +124,22 @@ build CMakeFiles/MemoryGameFinal.dir/boardData.cpp.o: CXX_COMPILER__MemoryGameFi
   OBJECT_FILE_DIR = CMakeFiles/MemoryGameFinal.dir
   dyndep = CMakeFiles/MemoryGameFinal.dir/CXX.dd
 
-build CMakeFiles/MemoryGameFinal.dir/CXX.dd | /home/kcorea/CLionProjects/MemoryGameFinal/cmake-build-debug/CMakeFiles/MemoryGameFinal.dir/CXXModules.json CMakeFiles/MemoryGameFinal.dir/main.cpp.o.modmap CMakeFiles/MemoryGameFinal.dir/Game.cpp.o.modmap CMakeFiles/MemoryGameFinal.dir/themes.cpp.o.modmap CMakeFiles/MemoryGameFinal.dir/asciiArt.cpp.o.modmap CMakeFiles/MemoryGameFinal.dir/boardData.cpp.o.modmap: CXX_DYNDEP__MemoryGameFinal_Debug CMakeFiles/MemoryGameFinal.dir/main.cpp.o.ddi CMakeFiles/MemoryGameFinal.dir/Game.cpp.o.ddi CMakeFiles/MemoryGameFinal.dir/themes.cpp.o.ddi CMakeFiles/MemoryGameFinal.dir/asciiArt.cpp.o.ddi CMakeFiles/MemoryGameFinal.dir/boardData.cpp.o.ddi | /home/kcorea/CLionProjects/MemoryGameFinal/cmake-build-debug/CMakeFiles/MemoryGameFinal.dir/CXXDependInfo.json
+build CMakeFiles/MemoryGameFinal.dir/tuiLogic.cpp.o.ddi: CXX_SCAN__MemoryGameFinal_Debug /home/kcorea/CLionProjects/MemoryGameFinal/tuiLogic.cpp || cmake_object_order_depends_target_MemoryGameFinal
+  DEP_FILE = CMakeFiles/MemoryGameFinal.dir/tuiLogic.cpp.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/MemoryGameFinal.dir/tuiLogic.cpp.o.ddi
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJ_FILE = CMakeFiles/MemoryGameFinal.dir/tuiLogic.cpp.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/MemoryGameFinal.dir/tuiLogic.cpp.o.ddi.i
+
+build CMakeFiles/MemoryGameFinal.dir/tuiLogic.cpp.o: CXX_COMPILER__MemoryGameFinal_scanned_Debug /home/kcorea/CLionProjects/MemoryGameFinal/tuiLogic.cpp | CMakeFiles/MemoryGameFinal.dir/tuiLogic.cpp.o.modmap || cmake_object_order_depends_target_MemoryGameFinal CMakeFiles/MemoryGameFinal.dir/CXX.dd
+  DEP_FILE = CMakeFiles/MemoryGameFinal.dir/tuiLogic.cpp.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/MemoryGameFinal.dir/tuiLogic.cpp.o.modmap
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/MemoryGameFinal.dir
+  OBJECT_FILE_DIR = CMakeFiles/MemoryGameFinal.dir
+  dyndep = CMakeFiles/MemoryGameFinal.dir/CXX.dd
+
+build CMakeFiles/MemoryGameFinal.dir/CXX.dd | /home/kcorea/CLionProjects/MemoryGameFinal/cmake-build-debug/CMakeFiles/MemoryGameFinal.dir/CXXModules.json CMakeFiles/MemoryGameFinal.dir/main.cpp.o.modmap CMakeFiles/MemoryGameFinal.dir/Game.cpp.o.modmap CMakeFiles/MemoryGameFinal.dir/themes.cpp.o.modmap CMakeFiles/MemoryGameFinal.dir/display.cpp.o.modmap CMakeFiles/MemoryGameFinal.dir/boardData.cpp.o.modmap CMakeFiles/MemoryGameFinal.dir/tuiLogic.cpp.o.modmap: CXX_DYNDEP__MemoryGameFinal_Debug CMakeFiles/MemoryGameFinal.dir/main.cpp.o.ddi CMakeFiles/MemoryGameFinal.dir/Game.cpp.o.ddi CMakeFiles/MemoryGameFinal.dir/themes.cpp.o.ddi CMakeFiles/MemoryGameFinal.dir/display.cpp.o.ddi CMakeFiles/MemoryGameFinal.dir/boardData.cpp.o.ddi CMakeFiles/MemoryGameFinal.dir/tuiLogic.cpp.o.ddi | /home/kcorea/CLionProjects/MemoryGameFinal/cmake-build-debug/CMakeFiles/MemoryGameFinal.dir/CXXDependInfo.json
 
 
 # =============================================================================
@@ -134,7 +149,7 @@ build CMakeFiles/MemoryGameFinal.dir/CXX.dd | /home/kcorea/CLionProjects/MemoryG
 #############################################
 # Link the executable MemoryGameFinal
 
-build MemoryGameFinal: CXX_EXECUTABLE_LINKER__MemoryGameFinal_Debug CMakeFiles/MemoryGameFinal.dir/main.cpp.o CMakeFiles/MemoryGameFinal.dir/Game.cpp.o CMakeFiles/MemoryGameFinal.dir/themes.cpp.o CMakeFiles/MemoryGameFinal.dir/asciiArt.cpp.o CMakeFiles/MemoryGameFinal.dir/boardData.cpp.o
+build MemoryGameFinal: CXX_EXECUTABLE_LINKER__MemoryGameFinal_Debug CMakeFiles/MemoryGameFinal.dir/main.cpp.o CMakeFiles/MemoryGameFinal.dir/Game.cpp.o CMakeFiles/MemoryGameFinal.dir/themes.cpp.o CMakeFiles/MemoryGameFinal.dir/display.cpp.o CMakeFiles/MemoryGameFinal.dir/boardData.cpp.o CMakeFiles/MemoryGameFinal.dir/tuiLogic.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/MemoryGameFinal.dir
   POST_BUILD = :

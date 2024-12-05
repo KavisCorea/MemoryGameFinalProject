@@ -19,6 +19,7 @@ struct boardData {
    //to future me looking over this, this is basically a vector of vectors.
    static void shuffleList(std::vector<std::string> list);
    static void boardInitialize();
+   static void checkMax();
 };
 
 
